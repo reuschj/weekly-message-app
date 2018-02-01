@@ -1,0 +1,580 @@
+@charset "UTF-8";
+html,
+body {
+    font: 100% "Roboto", Helvetica, sans-serif;
+    color: #222;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Roboto", Helvetica, sans-serif;
+    font-weight: bold;
+    color: #0071ce;
+}
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+h1 .material-icons,
+h2 .material-icons,
+h3 .material-icons,
+h4 .material-icons,
+h5 .material-icons,
+h6 .material-icons,
+p .material-icons {
+    max-width: 1em;
+    line-height: 0.1;
+    position: relative;
+    font-size: 1em;
+    bottom: -0.1em;
+}
+
+.titleCopy {
+    display: inline-block;
+}
+
+.spark {
+    color: #ffc220 !important;
+}
+
+.lightBlue {
+    color: #8cbdeb !important;
+}
+
+.Bar {
+    background: #eee;
+    color: #222;
+    width: 100%;
+    margin: 0;
+    padding: 0.25em 0;
+    position: relative;
+}
+
+.Bar.editable {
+    background: rgba(255, 194, 32, 0.5);
+    color: #222;
+}
+
+.ContentContainer {
+    max-width: 1200px;
+    display: block;
+    margin: 0 auto 0 auto;
+    position: relative;
+    padding: 0 1em;
+}
+
+select {
+    -webkit-appearance: menulist;
+}
+
+.Button {
+    background: none;
+    color: #777;
+    height: 2em;
+    width: 2em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    border-radius: 1em;
+    margin: 0.5em;
+    padding: 0.25em;
+    cursor: pointer;
+}
+
+.Button.invert {
+    background: #777;
+    color: #fff;
+}
+
+.Button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 300ms;
+}
+
+.Button:focus {
+    filter: brightness(115%);
+    outline: none;
+}
+
+.Button:active {
+    background: rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.65);
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.65);
+    transition: all 300ms;
+}
+
+.Button.invert:hover,
+.Button.invert:active {
+    color: #fff;
+}
+
+.Button.blue:hover {
+    color: #0071ce;
+    background: rgba(0, 113, 206, 0.2);
+}
+
+.Button.blue:active {
+    color: #0071ce;
+    background: rgba(0, 113, 206, 0.4);
+}
+
+.Button.invert.blue {
+    background: #0071ce;
+}
+
+.Button.invert.blue:hover {
+    color: #fff;
+    background: #028dff;
+}
+
+.Button.invert.blue:active {
+    color: #fff;
+    background: #35a4ff;
+}
+
+.Button.darkBlue:hover {
+    color: #2f2951;
+    background: rgba(47, 41, 81, 0.2);
+}
+
+.Button.darkBlue:active {
+    color: #2f2951;
+    background: rgba(47, 41, 81, 0.4);
+}
+
+.Button.invert.darkBlue {
+    background: #2f2951;
+}
+
+.Button.invert.darkBlue:hover {
+    color: #fff;
+    background: #433a73;
+}
+
+.Button.invert.darkBlue:active {
+    color: #fff;
+    background: #564b95;
+}
+
+.Button.lightBlue:hover {
+    color: #8cbdeb;
+    background: rgba(47, 41, 81, 0.2);
+}
+
+.Button.lightBlue:active {
+    color: #8cbdeb;
+    background: rgba(140, 189, 235, 0.4);
+}
+
+.Button.invert.lightBlue {
+    background: #8cbdeb;
+}
+
+.Button.invert.lightBlue:hover {
+    color: #fff;
+    background: #b7d6f3;
+}
+
+.Button.invert.lightBlue:active {
+    color: #fff;
+    background: #e3effa;
+}
+
+.Button.gold:hover {
+    color: #ffc220;
+    background: rgba(255, 194, 32, 0.2);
+}
+
+.Button.gold:active {
+    color: #ffc220;
+    background: rgba(255, 194, 32, 0.4);
+}
+
+.Button.invert.gold {
+    background: #5fb446;
+}
+
+.Button.invert.gold:hover {
+    color: #fff;
+    background: #ffd053;
+}
+
+.Button.invert.gold:active {
+    color: #fff;
+    background: #ffde86;
+}
+
+.Button.green:hover {
+    color: #5fb446;
+    background: rgba(95, 180, 70, 0.2);
+}
+
+.Button.green:active {
+    color: #5fb446;
+    background: rgba(95, 180, 70, 0.4);
+}
+
+.Button.invert.green {
+    background: #5fb446;
+}
+
+.Button.invert.green:hover {
+    color: #fff;
+    background: #7dc469;
+}
+
+.Button.invert.green:active {
+    color: #fff;
+    background: #9dd38d;
+}
+
+.Button.orange:hover {
+    color: #fa6400;
+    background: rgba(250, 100, 0, 0.2);
+}
+
+.Button.orange:active {
+    color: #fa6400;
+    background: rgba(250, 100, 0, 0.4);
+}
+
+.Button.invert.orange {
+    background: #fa6400;
+}
+
+.Button.invert.orange:hover {
+    color: #fff;
+    background: #ff822e;
+}
+
+.Button.invert.orange:active {
+    color: #fff;
+    background: #ffa061;
+}
+
+.Button.red:hover {
+    color: #de1c24;
+    background: rgba(222, 28, 36, 0.2);
+}
+
+.Button.red:active {
+    color: #de1c24;
+    background: rgba(222, 28, 36, 0.4);
+}
+
+.Button.invert.red {
+    background: #de1c24;
+}
+
+.Button.invert.red:hover {
+    color: #fff;
+    background: #e8454c;
+}
+
+.Button.invert.red:active {
+    color: #fff;
+    background: #ed7378;
+}
+
+.Button.black:hover {
+    color: #000;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.Button.red:active {
+    color: #000;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.Button.invert.black {
+    background: #000;
+}
+
+.Button.invert.black:hover {
+    color: #fff;
+    background: #1a1a1a;
+}
+
+.Button.invert.black:active {
+    color: #fff;
+    background: #333333;
+}
+
+.Button.yellow:hover {
+    color: #de1c24;
+    background: rgba(255, 242, 0, 0.2);
+}
+
+.Button.yellow:active {
+    color: #fff200;
+    background: rgba(255, 242, 0, 0.4);
+}
+
+.Button.invert.yellow {
+    background: #fff200;
+}
+
+.Button.invert.yellow:hover {
+    color: #fff;
+    background: #fff533;
+}
+
+.Button.invert.yellow:active {
+    color: #fff;
+    background: #fff766;
+}
+
+.Button.white:hover {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.Button.white:active {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.Button.invert.white {
+    background: #fff;
+}
+
+.Button.invert.white:hover {
+    color: #777;
+    background: #919191;
+}
+
+.Button.invert.white:active {
+    color: #777;
+    background: #aaaaaa;
+}
+
+.statusLabel {
+    font-weight: bold;
+    margin-right: 0.3em;
+}
+
+#LoginBar {
+    background: #2f2951;
+    color: #eee;
+    text-align: right;
+    padding: 0;
+}
+#LoginBar div * {
+    display: inline-block;
+}
+#LoginBar .LoginStatus {
+    height: 2em;
+    vertical-align: middle;
+}
+
+#MessageContainer {
+    margin: 0;
+    padding: 0;
+}
+#MessageContainer #MessageHeader {
+    text-align: center;
+    padding-top: 1em;
+}
+#MessageContainer #MessageHeader .material-icons {
+    margin-left: 0.1em;
+}
+#MessageContainer #MessageIsBeingEdited {
+    text-align: center;
+}
+#MessageContainer #MessageIsBeingEdited h4 {
+    color: #777;
+    margin: 0.5em 0;
+}
+#MessageContainer #MessageSelectionBar {
+    text-align: center;
+}
+#MessageContainer #MessageSelectionBar div > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+#MessageContainer #MessageSelectionBar #AreaSelect,
+#MessageContainer #MessageSelectionBar #YrWkSelect {
+    display: inline-block;
+    margin: 0.5em;
+}
+#MessageContainer #MessageSelectionBar #AreaSelect label,
+#MessageContainer #MessageSelectionBar #YrWkSelect label {
+    margin-right: 0.25em;
+    display: none;
+}
+#MessageContainer #MessageSelectionBar #AreaSelect select,
+#MessageContainer #MessageSelectionBar #YrWkSelect select {
+    max-width: 20em;
+    width: auto;
+    display: inline-block;
+    background-image: initial;
+}
+#MessageContainer #MessageBranding {
+    background: #fff;
+    color: #222;
+    border-bottom: 1px solid #ccc;
+    padding: 1em 0;
+    height: 10em;
+}
+#MessageContainer #MessageBranding div > * {
+    display: inline-block;
+}
+#MessageContainer #MessageBranding #CurrentAreaTitle {
+    margin: 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+#MessageContainer #MessageBranding #CurrentAreaTitle * {
+    display: block;
+    margin: 0;
+}
+#MessageContainer #MessageBranding #CurrentAreaTitle h4 {
+    color: #000;
+}
+#MessageContainer #MessageBranding .CurrentAreaIcon {
+    position: relative;
+    float: right;
+    height: 8em;
+    width: 8em;
+    background-color: #eee;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+#MessageContainer #MessageBranding .CurrentAreaIcon .IconGraphic {
+    position: absolute;
+    left: 1em;
+    right: 1em;
+    top: 1em;
+    bottom: 1em;
+    background-size: contain !important;
+    background-position: right !important;
+    background-repeat: no-repeat !important;
+}
+#MessageContainer #MessageStatusBar,
+#MessageContainer #MessageEditBar {
+    text-align: center;
+}
+#MessageContainer #MessageStatusBar .StatusIndicator,
+#MessageContainer #MessageEditBar .StatusIndicator {
+    display: inline-block;
+    vertical-align: middle;
+    height: 2em;
+    color: #777;
+}
+#MessageContainer #MessageStatusBar .StatusIndicator .status::before,
+#MessageContainer #MessageEditBar .StatusIndicator .status::before {
+    content: "Status:";
+    font-weight: bold;
+    margin-right: 0.3em;
+}
+#MessageContainer #MessageStatusBar .StatusIndicator .lockoutMessage,
+#MessageContainer #MessageEditBar .StatusIndicator .lockoutMessage {
+    font-style: italic;
+    font-size: 0.85em;
+    margin-left: 0.5em;
+}
+#MessageContainer #MessageEditBar {
+    background: none;
+    color: #222;
+}
+#MessageContainer #HomeScreen {
+    margin-top: 3em;
+}
+#MessageContainer #NotPublishedMessage {
+    margin-top: 3em;
+    text-align: center;
+}
+#MessageContainer #NotPublishedMessage h4 {
+    color: #777;
+}
+#MessageContainer #MessageCanvas {
+    max-width: 1200px;
+    display: block;
+    margin: 2em auto 0 auto;
+}
+#MessageContainer #MessageCanvas p {
+    margin: 1em 0;
+}
+#MessageContainer #MessageCanvas ul {
+    list-style-type: none;
+    margin: 1em 0;
+    padding-left: 2.5em;
+}
+#MessageContainer #MessageCanvas ul li {
+    list-style-type: inherit;
+    margin: 0.5em 0;
+    position: relative;
+}
+#MessageContainer #MessageCanvas ul li ul {
+    margin: 0;
+}
+#MessageContainer #MessageCanvas ul li ul li {
+    margin: 0.25em 0;
+}
+#MessageContainer #MessageCanvas ul li ul li ul {
+    margin: 0;
+}
+#MessageContainer #MessageCanvas ul li ul li ul li {
+    margin: 0.1em 0;
+}
+#MessageContainer #MessageCanvas ul li ul li ul li:before {
+    content: "-";
+}
+#MessageContainer #MessageCanvas ul li ul li:before {
+    content: "▪";
+}
+#MessageContainer #MessageCanvas ul li:before {
+    content: "●";
+    position: absolute;
+    left: -1.5em;
+    color: #777;
+}
+
+#DMMArea {
+    margin-bottom: 2em;
+}
+
+#DMMPhoto img {
+    margin: auto;
+    display: block;
+    max-width: 200px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#DMMTitle h1,
+#DMMTitle h2,
+#DMMTitle h3,
+#DMMTitle h4,
+#DMMTitle h5,
+#DMMTitle h6 {
+    text-align: center;
+    margin-top: 0.25em;
+    margin-bottom: 0;
+}
+#DMMTitle p {
+    margin: 0 !important;
+}
+
+#DMMTitle #TITLEBOX1 {
+    text-align: center;
+    font-size: 0.9em;
+    margin: 0.25em 0;
+}
+
+#SpotlightArea i {
+    margin-right: 0.25em;
+}

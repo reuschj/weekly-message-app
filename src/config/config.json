@@ -1,0 +1,174 @@
+{
+    "defaults": {
+        "userType": "Viewer",
+        "noAreaSelected": "Select your message",
+        "data": [
+            {
+                "AREA": "areaTitle",
+                "YRWK": "",
+                "FIELD": "HEADER",
+                "TYPE": "text",
+                "MESSAGE": "Directly from your areaTitle leader to you!",
+                "LAYOUT": "",
+                "STATUS": ""
+            },
+            {
+                "AREA": "areaTitle",
+                "YRWK": "",
+                "FIELD": "IMG_FILE1",
+                "TYPE": "pic",
+                "MESSAGE": "http://placekitten.com/g/1000/1000",
+                "STATUS": ""
+            },
+            {
+                "AREA": "areaTitle",
+                "YRWK": "",
+                "FIELD": "NAMEBOX1",
+                "TYPE": "text",
+                "MESSAGE": "First Last",
+                "STATUS": ""
+            },
+            {
+                "AREA": "areaTitle",
+                "YRWK": "",
+                "FIELD": "TITLEBOX1",
+                "TYPE": "text",
+                "MESSAGE": "Title Here",
+                "STATUS": ""
+            },
+            {
+                "AREA": "areaTitle",
+                "YRWK": "theYrWk",
+                "FIELD": "IMG_FILE2",
+                "TYPE": "pic",
+                "MESSAGE": "http://placekitten.com/g/1200/1200",
+                "STATUS": "Draft"
+            },
+            {
+                "AREA": "areaTitle",
+                "YRWK": "theYrWk",
+                "FIELD": "MSGBOX1",
+                "TYPE": "text",
+                "MESSAGE": "<p>Add your content here.</p>",
+                "STATUS": "Draft"
+            },
+            {
+                "AREA": "areaTitle",
+                "YRWK": "theYrWk",
+                "FIELD": "MSGBOX2",
+                "TYPE": "text",
+                "MESSAGE":
+                    "<p>Add your content here.</p><img src='http://placekitten.com/g/1200/1200' />",
+                "STATUS": "Draft"
+            },
+            {
+                "AREA": "areaTitle",
+                "YRWK": "theYrWk",
+                "FIELD": "deptMess1",
+                "TYPE": "text",
+                "MESSAGE": "<ul><li>Add your content here.</li></ul>",
+                "STATUS": "Draft"
+            }
+        ]
+    },
+    "dataSource": "dataSource",
+    "savedUserType": "userType",
+    "editorInstances": [
+        {
+            "name": "overview",
+            "selector": "MSGBOX1",
+            "enabled": true,
+            "loaded": false,
+            "promise": null
+        },
+        {
+            "name": "additionalContent",
+            "selector": "deptMess1",
+            "enabled": true,
+            "loaded": false,
+            "promise": null
+        },
+        {
+            "name": "dmmPhoto",
+            "selector": "IMG_FILE1",
+            "enabled": false,
+            "loaded": false,
+            "promise": null
+        },
+        {
+            "name": "dmmName",
+            "selector": "NAMEBOX1",
+            "enabled": false,
+            "loaded": false,
+            "promise": null
+        },
+        {
+            "name": "dmmTitle",
+            "selector": "TITLEBOX1",
+            "enabled": false,
+            "loaded": false,
+            "promise": null
+        },
+        {
+            "name": "spotlight",
+            "selector": "MSGBOX2",
+            "enabled": true,
+            "loaded": false,
+            "promise": null
+        }
+    ],
+    "areaInfo": [
+        {
+            "name": "Area 01",
+            "title": "The European Languages",
+            "swimlane": "Lane 01",
+            "icon":
+                "https://images.vexels.com/media/users/3/128243/isolated/preview/a1a5b9494d50bb3754bba547f2d88487-computer-monitor-flat-icon-by-vexels.png",
+            "isPublished": false
+        },
+        {
+            "name": "Area 02",
+            "title": "Gregor Samsa",
+            "swimlane": "Lane 01",
+            "icon":
+                "https://images.vexels.com/media/users/3/133087/isolated/preview/8e009942bd4dea680f222a0ffce05da7-christmas-ball-flat-icon-121-by-vexels.png",
+            "isPublished": false
+        },
+        {
+            "name": "Area 03",
+            "title": "The Quick Brown Fox",
+            "swimlane": "Lane 02",
+            "icon":
+                "https://images.vexels.com/media/users/3/136167/isolated/preview/3635cdd51cc272ea8c61d77c5569d707-headphone-flat-icon-by-vexels.png",
+            "isPublished": false
+        },
+        {
+            "name": "Area 04",
+            "title": "A Wonderful Serenity",
+            "swimlane": "Lane 02",
+            "icon":
+                "https://i.pinimg.com/originals/32/e0/06/32e00686547d54e7916ff6a7ed4ca992.png",
+            "isPublished": false
+        },
+        {
+            "name": "Area 05",
+            "title": "Coast of the Semantics",
+            "swimlane": "Lane 02",
+            "icon":
+                "https://images.vexels.com/media/users/3/133087/isolated/preview/8e009942bd4dea680f222a0ffce05da7-christmas-ball-flat-icon-121-by-vexels.png",
+            "isPublished": false
+        }
+    ],
+    "weekInfo": {
+        "current": 2,
+        "weeks": [
+            "201751",
+            "201752",
+            "201801",
+            "201802",
+            "201803",
+            "201804",
+            "201805"
+        ]
+    }
+}
