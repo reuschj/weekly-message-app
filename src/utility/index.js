@@ -1,4 +1,6 @@
 export * from './areas'
+export * from './content'
 export * from './dataIO'
+export * from './editors'
 export * from './status'
 export * from './weeks'

@@ -267,7 +267,7 @@ const App = () => {
 	)
 }
 
-// export default App
+export default App
 
 // Bar.js ----------------------------------------------------------------------
 
@@ -285,7 +285,7 @@ const Bar = (props) => {
 	)
 }
 
-// export default Bar
+export default Bar
 
 // Container.js ---------------------------------------------------------
 
@@ -298,7 +298,7 @@ const Container = (props) => {
 	)
 }
 
-// export default Container
+export default Container
 
 // Row.js ---------------------------------------------------
 
@@ -311,7 +311,7 @@ const Row = (props) => {
 	)
 }
 
-// export default Row
+export default Row
 
 // ColumnWide.js ---------------------------------------------------
 
@@ -324,7 +324,7 @@ const ColumnWide = (props) => {
 	)
 }
 
-// export default ColumnWide
+export default ColumnWide
 
 // WideColumn.js ---------------------------------------------------
 
@@ -337,7 +337,7 @@ const ColumnNarrow = (props) => {
 	)
 }
 
-// export default ColumnNarrow
+export default ColumnNarrow
 
 // Button.js -------------------------------------------------------------------
 
@@ -350,7 +350,7 @@ const Button = (props) => {
 	)
 }
 
-// export default Button
+export default Button
 
 // MaterialButton.js -----------------------------------------------------------
 
@@ -363,7 +363,7 @@ const MaterialButton = (props) => {
 	)
 }
 
-// export default MaterialButton
+export default MaterialButton
 
 // MaterialFloatingButton.js ---------------------------------------------------
 
@@ -377,7 +377,7 @@ const MaterialFloatingButton = (props) => {
 	)
 }
 
-// export default MaterialFloatingButton
+export default MaterialFloatingButton
 
 // HtmlContent.js --------------------------------------------------------------
 
@@ -387,7 +387,7 @@ const HtmlContent = (props) => {
 	)
 }
 
-// export default HtmlContent
+export default HtmlContent
 
 // UploadImage.js --------------------------------------------------------------
 
@@ -397,7 +397,7 @@ const UploadImage = (props) => {
     )
 }
 
-// export default UploadImage
+export default UploadImage
 
 // FormSelect.js ---------------------------------------------------------------
 
@@ -427,7 +427,7 @@ class FormSelect extends React.Component {
 	}
 }
 
-// export default FormSelect
+export default FormSelect
 
 // LoginContainer.js -----------------------------------------------------------
 
@@ -485,7 +485,7 @@ class LoginContainer extends React.Component {
 	}
 }
 
-// export default LoginContainer
+export default LoginContainer
 
 // LoginBar.js --------------------------------------------------------------
 
@@ -498,7 +498,7 @@ const LoginBar = (props) => {
 	)
 }
 
-// export default LoginBar
+export default LoginBar
 
 // LoginStatus.js --------------------------------------------------------------
 
@@ -511,7 +511,7 @@ const LoginStatus = (props) => {
 	)
 }
 
-// export default LoginStatus
+export default LoginStatus
 
 // LoginControl.js -------------------------------------------------------------
 
@@ -535,7 +535,7 @@ class LoginControl extends React.Component {
 	}
 }
 
-// export default LoginControl
+export default LoginControl
 
 // MessageContainer.js ---------------------------------------------------------
 
@@ -996,7 +996,7 @@ class MessageContainer extends React.Component {
 	}
 }
 
-// export default MessageContainer
+export default MessageContainer
 
 // MessageHeader.js -----------------------------------------------------------------
 
@@ -1011,7 +1011,7 @@ const MessageHeader = (props) => {
 	)
 }
 
-// export default MessageHeader
+export default MessageHeader
 
 // MessageSelectionBar.js ------------------------------------------------------
 
@@ -1045,7 +1045,7 @@ const MessageSelectionBar = (props) => {
     )
 }
 
-// export default MessageSelectionBar
+export default MessageSelectionBar
 
 // HomeButton.js ------------------------------------------------------
 
@@ -1070,7 +1070,7 @@ class HomeButton extends React.Component {
 	}
 }
 
-// export default HomeButton
+export default HomeButton
 
 // AreaSelect.js ------------------------------------------------------
 
@@ -1106,7 +1106,7 @@ class AreaSelect extends React.Component {
 	}
 }
 
-// export default AreaSelect
+export default AreaSelect
 
 // YrWkSelect.js ------------------------------------------------------
 
@@ -1134,7 +1134,7 @@ class YrWkSelect extends React.Component {
 	}
 }
 
-// export default YrWkSelect
+export default YrWkSelect
 
 // PrintButton.js ------------------------------------------------------
 
@@ -1152,7 +1152,7 @@ class PrintButton extends React.Component {
 	}
 }
 
-// export default PrintButton
+export default PrintButton
 
 // MessageStatusBar.js ------------------------------------------------------
 
@@ -1193,7 +1193,7 @@ class MessageStatusBar extends React.Component {
 	}
 }
 
-// export default MessageStatusBar
+export default MessageStatusBar
 
 // StatusIndicator.js -----------------------------------------------------------------
 
@@ -1213,7 +1213,7 @@ const StatusIndicator = (props) => {
     )
 }
 
-// export default StatusIndicator
+export default StatusIndicator
 
 // EditButton.js ------------------------------------------------------
 
@@ -1249,7 +1249,7 @@ class EditButton extends React.Component {
 	}
 }
 
-// export default EditButton
+export default EditButton
 
 // CancelButton.js ------------------------------------------------------
 
@@ -1276,7 +1276,7 @@ class CancelButton extends React.Component {
 	}
 }
 
-// export default CancelButton
+export default CancelButton
 
 // MessageBranding.js -----------------------------------------------------------------
 
@@ -1297,7 +1297,7 @@ const MessageBranding = (props) => {
 	)
 }
 
-// export default MessageBranding
+export default MessageBranding
 
 // MessageEditBar.js -----------------------------------------------------------------
 
@@ -1331,7 +1331,7 @@ const MessageEditBar = (props) => {
     )
 }
 
-// export default MessageEditBar
+export default MessageEditBar
 
 // SaveButton.js ------------------------------------------------------
 
@@ -1354,7 +1354,7 @@ class SaveButton extends React.Component {
 	}
 }
 
-// export default SaveButton
+export default SaveButton
 
 // SubmitButton.js ------------------------------------------------------
 
@@ -1378,7 +1378,7 @@ class SubmitButton extends React.Component {
 	}
 }
 
-// export default SubmitButton
+export default SubmitButton
 
 // UnSubmitButton.js ------------------------------------------------------
 
@@ -1402,7 +1402,7 @@ class UnSubmitButton extends React.Component {
 	}
 }
 
-// export default UnSubmitButton
+export default UnSubmitButton
 
 // PublishButton.js ------------------------------------------------------
 
@@ -1426,7 +1426,7 @@ class PublishButton extends React.Component {
 	}
 }
 
-// export default PublishButton
+export default PublishButton
 
 // UnpublishButton.js ------------------------------------------------------
 
@@ -1450,7 +1450,7 @@ class UnpublishButton extends React.Component {
 	}
 }
 
-// export default UnpublishButton
+export default UnpublishButton
 
 // HomeScreen.js -----------------------------------------------------------------
 
@@ -1474,7 +1474,7 @@ const HomeScreen = (props) => {
     )
 }
 
-// export default HomeScreen
+export default HomeScreen
 
 // NotPublishedMessage.js -----------------------------------------------------------------
 
@@ -1491,7 +1491,7 @@ const NotPublishedMessage = (props) => {
 	)
 }
 
-// export default NotPublishedMessage
+export default NotPublishedMessage
 
 // MessageCanvas.js -----------------------------------------------------------------
 
@@ -1553,7 +1553,7 @@ class MessageCanvas extends React.Component {
 	}
 }
 
-// export default MessageCanvas
+export default MessageCanvas
 
 // DMMArea.js -----------------------------------------------------------------
 
@@ -1601,7 +1601,7 @@ const DMMTitle = (props) => {
 	)
 }
 
-// export default DMMTitle
+export default DMMTitle
 
 // SpotlightArea.js -----------------------------------------------------------------
 
