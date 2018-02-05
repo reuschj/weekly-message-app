@@ -1,5 +1,7 @@
-import Button from '..../generic/Button'
-import changeStatus from '...../actions'
+import React from 'react'
+import PropTypes from 'prop-types'
+import Button from '.../generic/Button'
+import changeStatus from '..../actions'
 
 class PublishButton extends React.Component {
 	constructor(props) {

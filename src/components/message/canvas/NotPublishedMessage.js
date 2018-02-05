@@ -1,3 +1,5 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import Container from '.../generic/Container'
 
 const NotPublishedMessage = (props) => {

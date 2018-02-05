@@ -1,3 +1,5 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import Bar from '../generic/Bar'
 import Button from '../generic/Button'
 // import LoginControl from '.LoginControl'

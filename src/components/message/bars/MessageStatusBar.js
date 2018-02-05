@@ -1,4 +1,6 @@
-import Bar from '..../generic/Bar'
+import React from 'react'
+import PropTypes from 'prop-types'
+import Bar from '.../generic/Bar'
 import EditButton from '../buttons/EditButton'
 import CancelButton from '../buttons/CancelButton'
 

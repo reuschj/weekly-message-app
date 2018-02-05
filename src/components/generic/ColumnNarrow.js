@@ -1,3 +1,6 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+
 // Bootstrap column
 const ColumnNarrow = (props) => {
 	return (

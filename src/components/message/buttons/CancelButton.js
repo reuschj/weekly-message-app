@@ -1,6 +1,8 @@
-import Button from '..../generic/Button'
-import destroyEditors from '...../utility'
-import editToggle from '...../actions'
+import React from 'react'
+import PropTypes from 'prop-types'
+import Button from '.../generic/Button'
+import destroyEditors from '..../utility'
+import editToggle from '..../actions'
 
 class CancelButton extends React.Component {
 	constructor(props) {

@@ -1,3 +1,6 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+
 const MaterialButton = (props) => {
 	return (
 		<button type="button" className={"mdc-button mdc-button--raised"} id={props.id} title={props.text} aria-label={props.text} onClick={props.onClick} data-mdc-auto-init="MDCRipple" role="button" aria-pressed="false">

@@ -1,5 +1,7 @@
-import Button from '..../generic/Button'
-import saveEditorContent from '...../utility'
+import React from 'react'
+import PropTypes from 'prop-types'
+import Button from '.../generic/Button'
+import saveEditorContent from '..../utility'
 
 class SaveButton extends React.Component {
 	constructor(props) {

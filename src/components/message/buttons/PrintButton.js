@@ -1,4 +1,6 @@
-import Button from '..../generic/Button'
+import React from 'react'
+import PropTypes from 'prop-types'
+import Button from '.../generic/Button'
 
 class PrintButton extends React.Component {
 	constructor(props) {

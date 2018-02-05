@@ -1,3 +1,5 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import LoginBar from './LoginBar'
 import MessageContainer from '../message/MessageContainer'
 

@@ -1,7 +1,9 @@
-import Button from '..../generic/Button'
-import saveEditorContent from '...../utility'
-import destroyEditors from '...../utility'
-import editToggle from '...../actions'
+import React from 'react'
+import PropTypes from 'prop-types'
+import Button from '.../generic/Button'
+import saveEditorContent from '..../utility'
+import destroyEditors from '..../utility'
+import editToggle from '..../actions'
 
 class EditButton extends React.Component {
 	constructor(props) {

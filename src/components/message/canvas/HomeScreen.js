@@ -1,3 +1,5 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import Container from '.../generic/Container'
 import Row from '.../generic/Row'
 import ColumnNarrow from '.../generic/ColumnNarrow'

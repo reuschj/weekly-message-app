@@ -1,3 +1,6 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+
 class FormSelect extends React.Component {
 	constructor(props) {
 		super(props)

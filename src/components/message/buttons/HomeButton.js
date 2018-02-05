@@ -1,5 +1,7 @@
-import Button from '..../generic/Button'
-import goHome from '...../actions'
+import React from 'react'
+import PropTypes from 'prop-types'
+import Button from '.../generic/Button'
+import goHome from '..../actions'
 
 class HomeButton extends React.Component {
 	constructor(props) {

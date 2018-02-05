@@ -1,4 +1,6 @@
-import Bar from '..../generic/Bar'
+import React from 'react'
+import PropTypes from 'prop-types'
+import Bar from '.../generic/Bar'
 import HomeButton from '../buttons/HomeButton'
 import AreaSelect from '../selects/AreaSelect'
 import YrWkSelect from '../selects/YrWkSelect'
