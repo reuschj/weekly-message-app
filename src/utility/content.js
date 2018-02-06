@@ -1,9 +1,9 @@
 const createDOMPurify = require('dompurify')
 const { JSDOM } = require('jsdom')
- 
+
 const window = (new JSDOM('')).window
 const DOMPurify = createDOMPurify(window)
-
+// Import config
 import config from '../config'
 
 // Given a data object and field, returns the value (message) from that field.

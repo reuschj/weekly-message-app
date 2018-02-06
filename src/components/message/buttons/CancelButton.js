@@ -5,7 +5,7 @@ import Button from '.../generic/Button'
 // Import utilities
 import destroyEditors from '..../utility'
 // Import actions
-import editToggle from '..../actions'
+import { editToggle, editOff } from '..../actions'
 
 class CancelButton extends React.Component {
 	constructor(props) {
@@ -14,13 +14,13 @@ class CancelButton extends React.Component {
 	}
 	// Toggles edit mode off, but doesn't save. It calls for CKE editors to be unloaded. Then toggles edit off/on.
 	handleClick() {
-		destroyEditors(this)
+		destroyEditors(this.props.editable)
 		.then(function() {
-			editToggle()
+			this.props.editOff()
 		})
 	}
 	render() {
-		if (!this.props.show || !this.props.isEditable) {
+		if (!this.props.show || !this.props.editable) {
 			return null
 		}
 		return (
@@ -31,20 +31,19 @@ class CancelButton extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        area: state.message.area,
-		value: state.components.AreaSelect.value
-    }
+        editable: state.app.editable
+	}
 }
 
 const mapDispatchTopProps = (dispatch) => {
     return {
-        setArea: value => {
-            dispatch(setArea(value))
+        editToggle: () => {
+            dispatch(editToggle())
         },
-		setAreaValue: value => {
-            dispatch(setAreaValue(value))
+		editOff: () => {
+            dispatch(editOff())
         }
     }
 }
 
-export default connect(mapStateToProps, mapDispatchTopProps)(AreaSelect)
+export default connect(mapStateToProps, mapDispatchTopProps)(CancelButton)

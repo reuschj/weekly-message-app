@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// Import components
 import Bar from '.../generic/Bar'
 import EditButton from '../buttons/EditButton'
 import CancelButton from '../buttons/CancelButton'
@@ -13,28 +14,20 @@ class MessageStatusBar extends React.Component {
 			return null
 		}
 		var barClass = ""
-		if (this.props.isEditable) {
+		if (this.props.editable) {
 			var barClass = "editable"
 		}
 		return (
 			<Bar id="MessageStatusBar" addClass={barClass}>
 				<StatusIndicator
 					show={this.props.allowViewStatus}
-					status={this.props.status}
 					allowEdit={this.props.allowEdit}
 				/>
 				<EditButton
 					show={this.props.allowEdit}
-					isEditable={this.props.isEditable}
-					editToggle={this.props.editToggle}
-					saveEditorContent={this.props.saveEditorContent}
-					destroyEditors={this.props.destroyEditors}
 				/>
 				<CancelButton
 					show={this.props.allowEdit}
-					isEditable={this.props.isEditable}
-					editToggle={this.props.editToggle}
-					destroyEditors={this.props.destroyEditors}
 				/>
 			</Bar>
 		)
@@ -57,4 +50,11 @@ const StatusIndicator = (props) => {
     )
 }
 
-export default MessageStatusBar
+const mapStateToProps = (state) => {
+    return {
+		status: state.message.status,
+		editable: state.app.editable
+	}
+}
+
+export default connect(mapStateToProps)(MessageStatusBar)

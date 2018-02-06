@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 // Import components
-import FormSelect from '../generic'
+import FormSelect from '../generic/FormSelect'
 // Import config
 import config from '.../config'
 // Import utilities
-import getAreas from '.../utility'
+import { getAreas } from '.../utility'
 
 class AreaSelect extends React.Component {
 	constructor(props) {

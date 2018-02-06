@@ -9,8 +9,7 @@ import HtmlContent from '.../generic/HtmlContent'
 import DMMArea from './DMMArea'
 import SpotlightArea from './SpotlightArea'
 // Import utilities
-import loadCKEditors from '..../utilty'
-import getContentFromData from '..../utilty'
+import { loadCKEditors, getContentFromData } from '..../utilty'
 
 class MessageCanvas extends React.Component {
 	constructor(props) {
@@ -19,7 +18,7 @@ class MessageCanvas extends React.Component {
 	// Loads the CKE editors after an update if edit mode is on and message is not locked (published)
 	componentDidUpdate() {
 		console.log("MessageCanvas just updated.")
-		if (this.props.isEditable && !this.props.isLocked) {
+		if (this.props.editable && !this.props.isLocked) {
 			// Load CKE Editor
 			loadCKEditors()
 		}
@@ -69,4 +68,11 @@ class MessageCanvas extends React.Component {
 	}
 }
 
-export default MessageCanvas
+const mapStateToProps = (state) => {
+    return {
+        data: state.message.data,
+		editable: state.app.editable
+	}
+}
+
+export default connect(mapStateToProps)(MessageCanvas)

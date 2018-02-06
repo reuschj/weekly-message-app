@@ -16,4 +16,22 @@ class PrintButton extends React.Component {
 	}
 }
 
-export default PrintButton
+
+const mapStateToProps = (state) => {
+    return {
+        editable: state.app.editable
+	}
+}
+
+const mapDispatchTopProps = (dispatch) => {
+    return {
+        editToggle: () => {
+            dispatch(editToggle())
+        },
+		editOff: () => {
+            dispatch(editOff())
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchTopProps)(PrintButton)

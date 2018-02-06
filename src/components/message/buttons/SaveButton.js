@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// Import components
 import Button from '.../generic/Button'
-import saveEditorContent from '..../utility'
+// Import utilities
+import { saveEditorContent } from '..../utility'
 
 class SaveButton extends React.Component {
 	constructor(props) {
@@ -10,7 +12,7 @@ class SaveButton extends React.Component {
 	}
 	// Saves to the source. Does not set the data in the state (since this would update the component). When the component updates, it will pull the latest saved data from the source into the state and load that.
 	handleClick() {
-		saveEditorContent()
+		saveEditorContent(this.props.editable, this.props.data, this.props.area, this.props.yrwk)
 	}
 	render() {
 		if (!this.props.show) {
@@ -22,4 +24,13 @@ class SaveButton extends React.Component {
 	}
 }
 
-export default SaveButton
+const mapStateToProps = (state) => {
+    return {
+		area: state.message.area,
+		yrwk: state.message.yrwk,
+		data: state.message.data,
+		editable: state.app.editable
+	}
+}
+
+export default connect(mapStateToProps)(SaveButton)

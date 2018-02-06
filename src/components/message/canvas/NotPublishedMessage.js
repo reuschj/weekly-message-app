@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// Import components
 import Container from '.../generic/Container'
 
 const NotPublishedMessage = (props) => {
@@ -15,4 +16,10 @@ const NotPublishedMessage = (props) => {
 	)
 }
 
-export default NotPublishedMessage
+const mapStateToProps = (state) => {
+    return {
+        area: state.message.area
+	}
+}
+
+export default connect(mapStateToProps)(NotPublishedMessage)

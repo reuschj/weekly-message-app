@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// Import components
 import Bar from '.../generic/Bar'
 import SaveButton from '../buttons/SaveButton'
 import SubmitButton from '../buttons/SubmitButton'
@@ -15,23 +16,18 @@ const MessageEditBar = (props) => {
         <Bar id="MessageEditBar">
             <SaveButton
                 show={props.allowSave}
-                saveEditorContent={props.saveEditorContent}
             />
             <SubmitButton
                 show={props.allowSubmit}
-                changeStatus={props.changeStatus}
             />
             <UnSubmitButton
                 show={props.allowUnSubmit}
-                changeStatus={props.changeStatus}
             />
             <PublishButton
                 show={props.allowPublish}
-                changeStatus={props.changeStatus}
             />
             <UnpublishButton
                 show={props.allowUnPublish}
-                changeStatus={props.changeStatus}
             />
         </Bar>
     )

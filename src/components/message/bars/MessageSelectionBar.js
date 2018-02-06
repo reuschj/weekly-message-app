@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// Import components
 import Bar from '.../generic/Bar'
 import HomeButton from '../buttons/HomeButton'
 import AreaSelect from '../selects/AreaSelect'
@@ -17,23 +18,22 @@ const MessageSelectionBar = (props) => {
     return (
         <Bar id="MessageSelectionBar">
             <HomeButton
-                area={props.area}
-                setArea={props.setArea}
                 active={props.homeActive}
             />
             <AreaSelect
-                area={props.area}
-                setArea={props.setArea}
                 homeActive={props.homeActive}
-                config={props.config}
             />
-            <YrWkSelect
-                setYrwk={props.setYrwk}
-                config={props.config}
-            />
+            <YrWkSelect />
             <PrintButton />
         </Bar>
     )
 }
 
-export default MessageSelectionBar
+const mapStateToProps = (state) => {
+    return {
+        area: state.message.area,
+		editable: state.app.editable
+	}
+}
+
+export default connect(mapStateToProps)(MessageSelectionBar)

@@ -1,7 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// Import components
 import Button from '.../generic/Button'
-import changeStatus from '..../actions'
+// Import actions
+import { changeStatus } from '..../actions'
+// Import user/status types
+import { UserTypes, StatusTypes } from '.../constants/stateTypes'
+const { viewer, contributor, reviewer } = UserTypes
+const { draft, review, published } = StatusTypes
 
 class PublishButton extends React.Component {
 	constructor(props) {
@@ -10,8 +16,7 @@ class PublishButton extends React.Component {
 	}
 	// Changes status to published
 	handleClick() {
-		let newStatus = "Published"
-		changeStatus(newStatus)
+		this.props.changeStatus(published)
 	}
 	render() {
 		if (!this.props.show) {
@@ -23,4 +28,18 @@ class PublishButton extends React.Component {
 	}
 }
 
-export default PublishButton
+const mapStateToProps = (state) => {
+    return {
+        status: state.message.status
+	}
+}
+
+const mapDispatchTopProps = (dispatch) => {
+    return {
+		changeStatus: value => {
+            dispatch(changeStatus(value))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchTopProps)(PublishButton)

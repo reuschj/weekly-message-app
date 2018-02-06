@@ -1,6 +1,6 @@
 import config from '../config'
-import setContentFromData from './content'
-import writeDataToSource from './dataIO'
+import { setContentFromData } from './content'
+import { writeDataToSource } from './dataIO'
 
 // Loads all CKE editor instances specified in config
 export const loadCKEditors = () => {

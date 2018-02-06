@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// Import components
 import Container from './Container'
 
 const Bar = (props) => {

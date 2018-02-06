@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// Import components
 import Button from '.../generic/Button'
-import goHome from '..../actions'
+// Import actions
+import { goHome } from '..../actions'
 
 class HomeButton extends React.Component {
 	constructor(props) {
@@ -10,18 +12,27 @@ class HomeButton extends React.Component {
 	}
 	// Sets area to home screen
 	handleClick() {
-		goHome()
+		this.props.goHome()
 	}
 	render() {
-		// Toggles button style if home is active
-		let isActive = false
-		if (this.props.active) {
-			isActive = true
-		}
 		return (
-			<Button id="HomeButton" icon="home" text="Home" invert={isActive} color="blue" onClick={this.handleClick} />
+			<Button id="HomeButton" icon="home" text="Home" invert={this.props.active} color="blue" onClick={this.handleClick} />
 		)
 	}
 }
 
-export default HomeButton
+const mapStateToProps = (state) => {
+    return {
+        editable: state.app.editable
+	}
+}
+
+const mapDispatchTopProps = (dispatch) => {
+    return {
+        goHome: () => {
+            dispatch(goHome())
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchTopProps)(HomeButton)

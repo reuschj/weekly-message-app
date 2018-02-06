@@ -1,6 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// Import components
 import Bar from '.../generic/Bar'
+// Import constants
+import config from '../config'
+// Import utilities
+import { lookupAreaInfo } from '../utilty'
 
 const MessageBrandingBar = (props) => {
 	if (!props.show) {
@@ -19,4 +24,12 @@ const MessageBrandingBar = (props) => {
 	)
 }
 
-export default MessageBrandingBar
+const mapStateToProps = (state) => {
+    return {
+        area: state.message.area,
+		areaTitle: lookupAreaInfo(state.message.area, "title", config.areaInfo)),
+		areaIcon: lookupAreaInfo(state.message.area, "icon", config.areaInfo))
+	}
+}
+
+export default connect(mapStateToProps)(MessageBrandingBar)

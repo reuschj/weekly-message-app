@@ -1,5 +1,5 @@
 import config from '../config'
-import { getCurrentWeek } from '../utility'
+import { getCurrentWeek, getUserType } from '../utility'
 
 const currentWeek = getCurrentWeek(
     config.weekInfo.weeks,
@@ -24,7 +24,7 @@ const { draft, review, published } = StatusTypes
 
 const initialState = {
     user: {
-        userType: viewer
+        userType: getUserType(config.savedUserType)
     },
     message: {
         area: null,

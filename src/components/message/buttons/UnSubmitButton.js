@@ -1,7 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// Import components
 import Button from '.../generic/Button'
-import changeStatus from '..../actions'
+// Import actions
+import { changeStatus } from '..../actions'
+// Import user/status types
+import { UserTypes, StatusTypes } from '.../constants/stateTypes'
+const { viewer, contributor, reviewer } = UserTypes
+const { draft, review, published } = StatusTypes
 
 class UnSubmitButton extends React.Component {
 	constructor(props) {
@@ -10,8 +16,7 @@ class UnSubmitButton extends React.Component {
 	}
 	// Changes status to back to draft
 	handleClick() {
-		let newStatus = "Draft"
-		changeStatus(newStatus)
+		changeStatus(draft)
 	}
 	render() {
 		if (!this.props.show) {
@@ -23,4 +28,18 @@ class UnSubmitButton extends React.Component {
 	}
 }
 
-export default UnSubmitButton
+const mapStateToProps = (state) => {
+    return {
+        status: state.message.status
+	}
+}
+
+const mapDispatchTopProps = (dispatch) => {
+    return {
+        changeStatus: value => {
+            dispatch(changeStatus(value))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchTopProps)(UnSubmitButton)

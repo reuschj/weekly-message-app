@@ -34,20 +34,14 @@ class Message extends React.Component {
 				<MessageSelectionBar
 					show={!this.props.editable}
 					homeActive={!this.props.permissions.isData || this.props.area === "HomeScreen"}
-					area={this.props.area}
 				/>
 				<MessageStatusBar
 					show={this.props.permissions.isData && this.props.permissions.allowViewStatus}
 					allowEdit={this.props.permissions.isData && this.props.permissions.allowEdit}
 					allowViewStatus={this.props.permissions.allowViewStatus}
-					status={this.props.status}
-					editable={this.props.editable}
 				/>
 				<MessageBrandingBar
 					show={this.props.permissions.isData}
-					area={this.props.area}
-					areaTitle={lookupAreaInfo(this.props.area, "title", config.areaInfo)}
-					areaIcon={lookupAreaInfo(this.props.area, "icon", config.areaInfo)}
 				/>
 				<MessageEditBar
 					show={this.props.permissions.isData && this.props.permissions.allowEdit && this.props.editable}
@@ -62,14 +56,10 @@ class Message extends React.Component {
                 />
                 <NotPublishedMessage
                     show={this.props.permissions.isData && !this.props.permissions.allowView}
-					area={this.props.area}
                 />
 				<MessageCanvas
 					show={this.props.permissions.isData && this.props.permissions.allowView}
 					isLocked={this.props.permissions.isLocked}
-					data={this.props.data}
-					userType={this.props.userType}
-					editable={this.props.editable}
 				/>
 			</div>
 		)
