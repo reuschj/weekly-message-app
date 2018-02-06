@@ -1,7 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// Import components
 import Button from '.../generic/Button'
+// Import utilities
 import destroyEditors from '..../utility'
+// Import actions
 import editToggle from '..../actions'
 
 class CancelButton extends React.Component {
@@ -26,4 +29,22 @@ class CancelButton extends React.Component {
 	}
 }
 
-export default CancelButton
+const mapStateToProps = (state) => {
+    return {
+        area: state.message.area,
+		value: state.components.AreaSelect.value
+    }
+}
+
+const mapDispatchTopProps = (dispatch) => {
+    return {
+        setArea: value => {
+            dispatch(setArea(value))
+        },
+		setAreaValue: value => {
+            dispatch(setAreaValue(value))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchTopProps)(AreaSelect)
