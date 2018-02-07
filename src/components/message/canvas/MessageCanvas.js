@@ -1,20 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 // Import components
-import Container from '.../generic/Container'
-import Row from '.../generic/Row'
-import ColumnNarrow from '.../generic/ColumnNarrow'
-import ColumnWide from '.../generic/ColumnWide'
-import HtmlContent from '.../generic/HtmlContent'
+import Container from '../../generic/Container'
+import Row from '../../generic/Row'
+import ColumnNarrow from '../../generic/ColumnNarrow'
+import ColumnWide from '../../generic/ColumnWide'
+import HtmlContent from '../../generic/HtmlContent'
 import DMMArea from './DMMArea'
 import SpotlightArea from './SpotlightArea'
 // Import utilities
-import { loadCKEditors, getContentFromData } from '..../utilty'
+import { loadCKEditors, getContentFromData } from '../../../utility'
 
 class MessageCanvas extends React.Component {
-	constructor(props) {
-		super(props)
-	}
 	// Loads the CKE editors after an update if edit mode is on and message is not locked (published)
 	componentDidUpdate() {
 		console.log("MessageCanvas just updated.")

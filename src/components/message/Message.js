@@ -1,24 +1,19 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 // Import components
 import MessageHeaderBar from './bars/MessageHeaderBar'
 import MessageSelectionBar from './bars/MessageSelectionBar'
 import MessageStatusBar from './bars/MessageStatusBar'
-import MessageBranding from './bars/MessageBranding'
+import MessageBrandingBar from './bars/MessageBrandingBar'
 import MessageEditBar from './bars/MessageEditBar'
 import HomeScreen from './canvas/HomeScreen'
 import NotPublishedMessage from './canvas/NotPublishedMessage'
 import MessageCanvas from './canvas/MessageCanvas'
-// Import constants
-import config from '../config'
 // Import utilities
-import { lookupAreaInfo, destroyEditors } from '../utilty'
+import { destroyEditors } from '../../utility'
 
 // This is the primary control center for most states and fuctions
 class Message extends React.Component {
-	constructor(props) {
-		super(props)
-	}
 	// Before component updates, this checks that if edit mode is on and will not be toggled off by the update. If not, it unloads the CKE editors and uses editToggle to enforce that edit mode is off on the update.
 	componentWillUpdate(nextProps) {
 		if (this.props.editable && nextProps.editable) {

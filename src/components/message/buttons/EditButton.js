@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 // Import components
-import Button from '.../generic/Button'
+import Button from '../../generic/Button'
 // Import utilities
-import { saveEditorContent, destroyEditors } from '..../utility'
+import { saveEditorContent, destroyEditors } from '../../../utility'
 // Import actions
-import { editToggle, editOff } from '..../actions'
+import { editToggle, editOff } from '../../../actions'
 
 class EditButton extends React.Component {
 	constructor(props) {
@@ -14,12 +15,14 @@ class EditButton extends React.Component {
 	}
 	// Toggles edit mode. First it saves the current data to source. Then calls for CKE editors to be unloaded. Then toggles edit off/on. Save/unload pass through if edit mode is off.
 	handleClick() {
+		let editable = this.props.editable
+		let editToggle = this.props.editToggle
 		saveEditorContent(this.props.editable, this.props.data, this.props.area, this.props.yrwk)
 		.then(function() {
-			destroyEditors(this.props.editable)
+			destroyEditors(editable)
 		})
 		.then(function() {
-			this.props.editToggle()
+			editToggle()
 		})
 	}
 	render() {

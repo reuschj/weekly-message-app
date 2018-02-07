@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 // Import components
-import Bar from '.../generic/Bar'
+import Bar from '../../generic/Bar'
 // Import constants
-import config from '../config'
+import config from '../../../config'
 // Import utilities
-import { lookupAreaInfo } from '../utilty'
+import { lookupAreaInfo } from '../../../utility'
 
 const MessageBrandingBar = (props) => {
 	if (!props.show) {
@@ -27,8 +28,8 @@ const MessageBrandingBar = (props) => {
 const mapStateToProps = (state) => {
     return {
         area: state.message.area,
-		areaTitle: lookupAreaInfo(state.message.area, "title", config.areaInfo)),
-		areaIcon: lookupAreaInfo(state.message.area, "icon", config.areaInfo))
+		areaTitle: lookupAreaInfo(state.message.area, "title", config.areaInfo),
+		areaIcon: lookupAreaInfo(state.message.area, "icon", config.areaInfo)
 	}
 }
 

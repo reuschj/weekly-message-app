@@ -1,10 +1,12 @@
-const createDOMPurify = require('dompurify')
-const { JSDOM } = require('jsdom')
-
-const window = (new JSDOM('')).window
-const DOMPurify = createDOMPurify(window)
+import DOMPurify from 'dompurify'
 // Import config
 import config from '../config'
+
+// const createDOMPurify = require('dompurify')
+// const { JSDOM } = require('jsdom')
+// const window = (new JSDOM('')).window
+// const DOMPurify = createDOMPurify(window)
+
 
 // Given a data object and field, returns the value (message) from that field.
 // Uses DOMPurify to validate the message for safety.

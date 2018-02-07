@@ -1,12 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 // Import components
-import Button from '.../generic/Button'
+import Button from '../../generic/Button'
 // Import actions
-import { changeStatus } from '..../actions'
+import { changeStatus } from '../../../actions'
 // Import user/status types
-import { UserTypes, StatusTypes } from '.../constants/stateTypes'
-const { viewer, contributor, reviewer } = UserTypes
+import { StatusTypes } from '../../../constants/stateTypes'
 const { draft, review, published } = StatusTypes
 
 class UnSubmitButton extends React.Component {

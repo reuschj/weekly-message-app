@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 // Import components
-import Container from '.../generic/Container'
+import Container from '../../generic/Container'
 
 const NotPublishedMessage = (props) => {
 	if (!props.show) {

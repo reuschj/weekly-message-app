@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 // Import components
-import Bar from '.../generic/Bar'
+import Bar from '../../generic/Bar'
 import SaveButton from '../buttons/SaveButton'
 import SubmitButton from '../buttons/SubmitButton'
 import UnSubmitButton from '../buttons/UnSubmitButton'
@@ -9,7 +9,7 @@ import PublishButton from '../buttons/PublishButton'
 import UnpublishButton from '../buttons/UnpublishButton'
 
 const MessageEditBar = (props) => {
-    if (!this.props.show) {
+    if (!props.show) {
         return null
     }
     return (

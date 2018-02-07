@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 // Import components
-import Button from '.../generic/Button'
+import Button from '../../generic/Button'
 // Import utilities
-import destroyEditors from '..../utility'
+import { destroyEditors } from '../../../utility'
 // Import actions
-import { editToggle, editOff } from '..../actions'
+import { editToggle, editOff } from '../../../actions'
 
 class CancelButton extends React.Component {
 	constructor(props) {
@@ -14,9 +15,10 @@ class CancelButton extends React.Component {
 	}
 	// Toggles edit mode off, but doesn't save. It calls for CKE editors to be unloaded. Then toggles edit off/on.
 	handleClick() {
+		let editOff = this.props.editOff
 		destroyEditors(this.props.editable)
 		.then(function() {
-			this.props.editOff()
+			editOff()
 		})
 	}
 	render() {

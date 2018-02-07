@@ -1,27 +1,26 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 // Import components
-import Bar from '.../generic/Bar'
+import Bar from '../../generic/Bar'
 import EditButton from '../buttons/EditButton'
 import CancelButton from '../buttons/CancelButton'
 
 class MessageStatusBar extends React.Component {
-	constructor(props) {
-		super(props)
-	}
 	render() {
 		if (!this.props.show) {
 			return null
 		}
 		var barClass = ""
 		if (this.props.editable) {
-			var barClass = "editable"
+			barClass = "editable"
 		}
 		return (
 			<Bar id="MessageStatusBar" addClass={barClass}>
 				<StatusIndicator
 					show={this.props.allowViewStatus}
 					allowEdit={this.props.allowEdit}
+					status={this.props.status}
 				/>
 				<EditButton
 					show={this.props.allowEdit}
@@ -35,16 +34,16 @@ class MessageStatusBar extends React.Component {
 }
 
 const StatusIndicator = (props) => {
-    if (!this.props.show) {
+    if (!props.show) {
         return null
     }
     let lockoutMessage = ""
-    if (!this.props.allowEdit) {
+    if (!props.allowEdit) {
         lockoutMessage = "(You cannot edit during this stage.)"
     }
     return (
         <div className="StatusIndicator">
-            <span className="status">{this.props.status}</span>
+            <span className="status">{props.status}</span>
             <span className="lockoutMessage">{lockoutMessage}</span>
         </div>
     )

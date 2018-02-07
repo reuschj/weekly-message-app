@@ -1,4 +1,7 @@
+import InlineEditor from '@ckeditor/ckeditor5-build-inline'
+// Import config
 import config from '../config'
+// Import utilities
 import { setContentFromData } from './content'
 import { writeDataToSource } from './dataIO'
 

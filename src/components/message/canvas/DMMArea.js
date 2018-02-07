@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 // Import components
-import UploadImage from '.../generic/UploadImage'
+import UploadImage from '../../generic/UploadImage'
 
 const DMMArea = (props) => {
 	return (

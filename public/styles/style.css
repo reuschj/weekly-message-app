@@ -77,6 +77,7 @@ select {
 
 .Button {
     background: none;
+    border: none;
     color: #777;
     height: 2em;
     width: 2em;
@@ -380,11 +381,11 @@ select {
     margin: 0;
     padding: 0;
 }
-#MessageContainer #MessageHeader {
+#MessageContainer #MessageHeaderBar {
     text-align: center;
     padding-top: 1em;
 }
-#MessageContainer #MessageHeader .material-icons {
+#MessageContainer #MessageHeaderBar .material-icons {
     margin-left: 0.1em;
 }
 #MessageContainer #MessageIsBeingEdited {
@@ -418,29 +419,29 @@ select {
     display: inline-block;
     background-image: initial;
 }
-#MessageContainer #MessageBranding {
+#MessageContainer #MessageBrandingBar {
     background: #fff;
     color: #222;
     border-bottom: 1px solid #ccc;
     padding: 1em 0;
     height: 10em;
 }
-#MessageContainer #MessageBranding div > * {
+#MessageContainer #MessageBrandingBar div > * {
     display: inline-block;
 }
-#MessageContainer #MessageBranding #CurrentAreaTitle {
+#MessageContainer #MessageBrandingBar #CurrentAreaTitle {
     margin: 0;
     margin-top: 2em;
     margin-bottom: 2em;
 }
-#MessageContainer #MessageBranding #CurrentAreaTitle * {
+#MessageContainer #MessageBrandingBar #CurrentAreaTitle * {
     display: block;
     margin: 0;
 }
-#MessageContainer #MessageBranding #CurrentAreaTitle h4 {
+#MessageContainer #MessageBrandingBar #CurrentAreaTitle h4 {
     color: #000;
 }
-#MessageContainer #MessageBranding .CurrentAreaIcon {
+#MessageContainer #MessageBrandingBar .CurrentAreaIcon {
     position: relative;
     float: right;
     height: 8em;
@@ -451,7 +452,7 @@ select {
     -ms-border-radius: 50%;
     border-radius: 50%;
 }
-#MessageContainer #MessageBranding .CurrentAreaIcon .IconGraphic {
+#MessageContainer #MessageBrandingBar .CurrentAreaIcon .IconGraphic {
     position: absolute;
     left: 1em;
     right: 1em;

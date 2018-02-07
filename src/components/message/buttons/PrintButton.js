@@ -1,6 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Button from '.../generic/Button'
+import { connect } from 'react-redux'
+// Import components
+import Button from '../../generic/Button'
+// Import actions
+import { editToggle, editOff } from '../../../actions'
 
 class PrintButton extends React.Component {
 	constructor(props) {

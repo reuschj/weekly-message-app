@@ -1,11 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 // Import components
-import FormSelect from '../generic/FormSelect'
+import FormSelect from '../../generic/FormSelect'
 // Import config
-import config from '.../config'
+import config from '../../../config'
+// Import actions
+import { setArea, setAreaValue } from '../../../actions'
 // Import utilities
-import { getAreas } from '.../utility'
+import { getAreas } from '../../../utility'
 
 class AreaSelect extends React.Component {
 	constructor(props) {

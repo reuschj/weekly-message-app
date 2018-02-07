@@ -7,7 +7,7 @@ export const setAreaValue = area => ({
     value: area
 })
 
-export const setYrwkValue = area => ({
+export const setYrwkValue = yrwk => ({
     type: SET_YRWK_VALUE,
     value: yrwk
 })

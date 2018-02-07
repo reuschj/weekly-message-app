@@ -1,14 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 // Import components
 import Message from './Message'
-// Import constants
-import config from '../config'
 // Import actions
-import { setArea, setYrwk, goHome, changeStatus, loadData, editToggle, editOn, editOff } from '../actions'
+import { setArea, setYrwk, goHome, changeStatus, loadData, editToggle, editOn, editOff } from '../../actions'
 // Import user/status types
-import { UserTypes, StatusTypes } from '.../constants/stateTypes'
+import { UserTypes, StatusTypes } from '../../constants/stateTypes'
 const { viewer, contributor, reviewer } = UserTypes
 const { draft, review, published } = StatusTypes
 
@@ -26,7 +23,7 @@ const setPermissions = (state) => {
         allowUnPublish: false
     }
     // Define shorthand for state
-    let userType = state.message.userType
+    let userType = state.user.userType
     let status = state.message.status
     let data = state.message.data
     // Tells components if data is loaded to the state
@@ -90,35 +87,35 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
-const mapDispatchTopProps = (dispatch, ownProps) => {
-    return {
-        setArea: value => {
-            dispatch(setArea(value))
-        },
-        setYrwk: value => {
-            dispatch(setYrwk(value))
-        },
-        goHome: () => {
-            dispatch(goHome())
-        },
-        changeStatus: value => {
-            dispatch(changeStatus(value))
-        },
-        loadData: value => {
-            dispatch(loadData(value))
-        },
-        editToggle: () => {
-            dispatch(editToggle())
-        },
-        editOn: () => {
-            dispatch(editOn())
-        },
-        editOff: () => {
-            dispatch(editOff())
-        }
-    }
-}
+// const mapDispatchTopProps = (dispatch, ownProps) => {
+//     return {
+//         setArea: value => {
+//             dispatch(setArea(value))
+//         },
+//         setYrwk: value => {
+//             dispatch(setYrwk(value))
+//         },
+//         goHome: () => {
+//             dispatch(goHome())
+//         },
+//         changeStatus: value => {
+//             dispatch(changeStatus(value))
+//         },
+//         loadData: value => {
+//             dispatch(loadData(value))
+//         },
+//         editToggle: () => {
+//             dispatch(editToggle())
+//         },
+//         editOn: () => {
+//             dispatch(editOn())
+//         },
+//         editOff: () => {
+//             dispatch(editOff())
+//         }
+//     }
+// }
 
-const MessageContainer = connect(mapStateToProps, mapDispatchTopProps)(Message)
+const MessageContainer = connect(mapStateToProps)(Message)
 
 export default MessageContainer

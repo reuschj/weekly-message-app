@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 // Import components
-import HtmlContent from '.../generic/HtmlContent'
+import HtmlContent from '../../generic/HtmlContent'
 
 const SpotlightArea = (props) => {
 	return (

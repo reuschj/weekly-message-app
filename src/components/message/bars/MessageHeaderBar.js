@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 // Import components
-import Bar from '../generic/Bar'
+import Bar from '../../generic/Bar'
 
 const MessageHeaderBar = (props) => {
 	return (
@@ -14,4 +14,4 @@ const MessageHeaderBar = (props) => {
 	)
 }
 
-export default MessageHeader
+export default MessageHeaderBar

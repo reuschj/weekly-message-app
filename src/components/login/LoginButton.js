@@ -1,15 +1,16 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 // Import components
 import Button from '../generic/Button'
 // Import actions
-import { setUserType } from '..../actions'
+import { setUserType } from '../../actions'
 // Import config
-import config from '.../config'
+import config from '../../config'
 // Import utility
-import { saveUserType, getUserType } from '.../utility'
+import { saveUserType } from '../../utility'
 // Import user/status types
-import { UserTypes } from '.../constants/stateTypes'
+import { UserTypes } from '../../constants/stateTypes'
 const { viewer, contributor, reviewer } = UserTypes
 
 class LoginButton extends React.Component {

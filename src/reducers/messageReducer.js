@@ -23,10 +23,12 @@ const messageReducer = (state = initialState.message, action) => {
         case GO_HOME:
             return {
                 ...state,
-                area: action.area
+                area: action.area,
+                status: null,
+                data: null
             }
         case SET_AREA:
-            let getData = readDataFromSource(
+            let getDataWithArea = readDataFromSource(
                 config.dataSource,
                 initialData,
                 action.area,
@@ -35,13 +37,21 @@ const messageReducer = (state = initialState.message, action) => {
             return {
                 ...state,
                 area: action.area,
-                status: lookupStatus(getData),
-                data: getData
+                status: lookupStatus(getDataWithArea),
+                data: getDataWithArea
             }
         case SET_YRWK:
+            let getDataWithYrwk = readDataFromSource(
+                config.dataSource,
+                initialData,
+                state.area,
+                action.yrwk
+            )
             return {
                 ...state,
-                yrwk: action.yrwk
+                yrwk: action.yrwk,
+                status: lookupStatus(getDataWithYrwk),
+                data: getDataWithYrwk
             }
         case LOAD_DATA:
             return {

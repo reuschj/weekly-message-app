@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 // Import components
-import Button from '.../generic/Button'
+import Button from '../../generic/Button'
 // Import utilities
-import { saveEditorContent } from '..../utility'
+import { saveEditorContent } from '../../../utility'
 
 class SaveButton extends React.Component {
 	constructor(props) {
