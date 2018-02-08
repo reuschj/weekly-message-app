@@ -9,7 +9,6 @@
     "bootstrap": "^4.0.0",
     "dompurify": "^1.0.3",
     "jquery": "^3.3.1",
-    "popper": "^1.0.1",
     "popper.js": "^1.12.9",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
@@ -20,7 +19,10 @@
     "redux-devtools": "^3.4.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "node-sass": "^4.7.2",
+    "redux-devtools": "^3.4.1",
     "sass-loader": "^6.0.6",
     "webpack": "^3.10.0"
   },
