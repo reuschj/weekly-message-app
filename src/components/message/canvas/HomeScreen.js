@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 // Import components
 import Container from '../../generic/Container'
 import Row from '../../generic/Row'

@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 // Import components
 import UploadImage from '../../generic/UploadImage'
 
@@ -9,6 +9,7 @@ const DMMArea = (props) => {
 			<DMMPhoto
 				image={props.image}
 				imageID={props.imageID}
+				name={props.name}
 			/>
 			<DMMTitle
 				name={props.name}
@@ -23,7 +24,7 @@ const DMMArea = (props) => {
 const DMMPhoto = (props) => {
 	return (
 		<div id="DMMPhoto">
-			<UploadImage id={props.imageID} className="DMMPhoto" fileName={props.image} />
+			<UploadImage id={props.imageID} className="DMMPhoto" fileName={props.image} name={props.name} />
 		</div>
 	)
 }

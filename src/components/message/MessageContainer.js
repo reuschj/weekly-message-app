@@ -2,8 +2,6 @@
 import { connect } from 'react-redux'
 // Import components
 import Message from './Message'
-// Import actions
-import { setArea, setYrwk, goHome, changeStatus, loadData, editToggle, editOn, editOff } from '../../actions'
 // Import user/status types
 import { UserTypes, StatusTypes } from '../../constants/stateTypes'
 const { viewer, contributor, reviewer } = UserTypes
