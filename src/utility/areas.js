@@ -22,7 +22,7 @@ export const isValidArea = (input, areaList) => {
         if (areaList[i].name === input) {
             return true
         } else if (
-            parseInt(i) === areaList.length - 1 &&
+            parseInt(i,10) === areaList.length - 1 &&
             areaList[i].name !== input
         ) {
             return false

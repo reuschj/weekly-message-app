@@ -22,7 +22,7 @@ export const readDataFromSource = (
     for (let i in data) {
         let finishedWithoutMatch =
             isValidArea(area, config.areaInfo) &&
-            parseInt(i) === data.length - 1 &&
+            parseInt(i,10) === data.length - 1 &&
             (data[i].area !== area || data[i].yrwk !== yrwk)
         if (data[i].area === area && data[i].yrwk === yrwk) {
             return data[i].data
@@ -53,7 +53,7 @@ export const writeDataToSource = (dataSource, inputData, area, yrwk) => {
         for (let i in data) {
             let finishedWithoutMatch =
                 isValidArea(area, config.areaInfo) &&
-                parseInt(i) === data.length - 1 &&
+                parseInt(i,10) === data.length - 1 &&
                 (data[i].area !== area || data[i].yrwk !== yrwk)
             if (data[i].area === area && data[i].yrwk === yrwk) {
                 data[i].data = inputData

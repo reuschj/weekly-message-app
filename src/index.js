@@ -1,26 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { render } from 'react-dom'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
+// Import components
 import App from './components/App'
+// Import reducers
 import rootReducer from './reducers'
-
-// Import actions
-import {
-    setUserType,
-    changeStatus,
-    goHome,
-    setArea,
-    setYrwk,
-    editToggle,
-    editOn,
-    editOff,
-    loadData
-} from './actions/'
-import { UserTypes, StatusTypes } from './constants/stateTypes'
-const { viewer, contributor, reviewer } = UserTypes
-const { draft, review, published } = StatusTypes
 
 // Create the store
 const store = createStore(rootReducer)

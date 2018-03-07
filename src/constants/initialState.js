@@ -1,30 +1,14 @@
 import config from '../config'
-import { getCurrentWeek } from '../utility'
+import { getCurrentWeek, getUserType } from '../utility'
 
 const currentWeek = getCurrentWeek(
     config.weekInfo.weeks,
     config.weekInfo.current
 )
 
-// Import actions
-import {
-    setUserType,
-    changeStatus,
-    goHome,
-    setArea,
-    setYrwk,
-    editToggle,
-    editOn,
-    editOff,
-    loadData
-} from '../actions'
-import { UserTypes, StatusTypes } from '../constants/stateTypes'
-const { viewer, contributor, reviewer } = UserTypes
-const { draft, review, published } = StatusTypes
-
 const initialState = {
     user: {
-        userType: viewer
+        userType: getUserType(config.savedUserType)
     },
     message: {
         area: null,
@@ -37,10 +21,10 @@ const initialState = {
     },
     components: {
         AreaSelect: {
-            value: null
+            value: 'undefinded'
         },
         YrWkSelect: {
-            value: null
+            value: 'undefinded'
         }
     }
 }

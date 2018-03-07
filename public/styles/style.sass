@@ -1,0 +1,528 @@
+
+// Colors
+$color-blue: #0071ce
+$color-darkBlue: #2f2951
+$color-lightBlue: #8cbdeb
+$color-gold: #ffc220
+$color-green: #5fb446
+$color-orange: #fa6400
+$color-red: #de1c24
+$color-yellow: #fff200
+$color-black: #000
+$color-white: #fff
+$color-gray: #ccc
+$color-darkGray: #777
+$color-lightGray: #eee
+$color-extraDarkGray: #444
+$color-extraLightGray: #f1f1f1
+$color-copy: #222
+
+// Fonts
+$fontStack: 'Roboto', Helvetica, sans-serif
+
+// Layout
+$none: 0
+$defaultPad: 0.25em
+
+// Breakpoints
+$mobileMinWidth: 280px
+$mobileMaxWidth: 479px
+$tabletMinWidth: 480px
+$tabletMaxWidth: 767px
+$desktopMinWidth: 768px
+$desktopMaxWidth: 1200px
+
+//Styles
+$defaultShadow: 1px 1px 4px rgba(0, 0, 0, 0.25)
+$deeperShadow: 1px 1px 6px rgba(0, 0, 0, 0.65)
+
+//Forms and controls
+$selectMaxWidth: 20em
+
+//Images and shapes
+=makeCircle()
+	-webkit-border-radius: 50%
+	-moz-border-radius: 50%
+	-ms-border-radius: 50%
+	border-radius: 50%
+
+// Mixins
+=border-radius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	-ms-border-radius: $radius
+	border-radius: $radius
+
+=box-shadow($shadowStats)
+	-webkit-box-shadow: $shadowStats
+	-moz-box-shadow: $shadowStats
+	box-shadow: $shadowStats
+
+=center-block($margin-top: 0, $margin-bottom: 0)
+	display: block
+	margin: $margin-top auto $margin-bottom auto
+
+=background-position($size: contain, $position: center)
+	background-size: $size !important
+	background-position: $position !important
+	background-repeat: no-repeat !important
+
+html, body
+	font: 100% $fontStack
+	color: $color-copy
+
+h1, h2, h3, h4, h5, h6
+	font-family: $fontStack
+	font-weight: bold
+	color: $color-blue
+
+img
+	display: inline-block
+	vertical-align: middle
+	max-width: 100%
+	height: auto
+
+h1, h2, h3, h4, h5, h6, p
+	.material-icons
+		max-width: 1em
+		line-height: 0.1
+		position: relative
+		font-size: 1em
+		bottom: -0.1em
+
+.titleCopy
+	display: inline-block
+
+.spark
+	color: $color-gold !important
+
+.lightBlue
+	color: $color-lightBlue !important
+
+// Common Components --------------------------------------
+
+// Bar
+$defaultBarMargin: 0
+$defaultBarPadding: 0.25em 0
+
+=barColor($bgColor: $color-lightGray, $copyColor: $color-copy)
+	background: $bgColor
+	color: $copyColor
+
+// Message Branding Bar
+$AreaIconSize: 8em
+$AreaIconPadding: 1em
+$MessageBrandingBarPadding: 1em
+
+.Bar
+	+barColor()
+	width: 100%
+	margin: $defaultBarMargin
+	padding: $defaultBarPadding
+	position: relative
+
+.Bar.editable
+	+barColor(rgba($color-gold, 0.5) , $color-copy)
+
+.ContentContainer
+	max-width: $desktopMaxWidth
+	+center-block()
+	position: relative
+	padding: 0 1em
+
+select
+	-webkit-appearance: menulist
+
+
+
+
+// Button ------------------------------------------------
+
+=buttonColor($bgColor: none, $iconColor: $color-darkGray)
+	background: $bgColor
+	color: $iconColor
+
+=roundButtonSize($buttonDiameter: 2em, $buttonMargin: 0.5em, $buttonPadding: 0.25em)
+	height: $buttonDiameter
+	width: $buttonDiameter
+	+border-radius($buttonDiameter / 2)
+	margin: $buttonMargin
+	padding: $buttonPadding
+
+.Button
+	+buttonColor()
+	+roundButtonSize(2em)
+	border: none
+	cursor: pointer
+
+.Button.invert
+	+buttonColor($color-darkGray, $color-white)
+
+$hoverAlpha: 0.2
+$activeAlpha: $hoverAlpha * 2
+$hoverAlphaInvert: 10%
+$activeAlphaInvert: $hoverAlphaInvert * 2
+
+.Button:hover
+	background: rgba($color-black, $hoverAlpha)
+	transition: all 300ms
+
+.Button:focus
+	filter: brightness(115%)
+	outline: none
+
+.Button:active
+	background: rgba($color-black, $activeAlpha)
+	+box-shadow($deeperShadow)
+	transition: all 300ms
+
+.Button.invert:hover, .Button.invert:active
+	color: $color-white
+
+
+// Blue
+.Button.blue:hover
+	color: $color-blue
+	background: rgba($color-blue, $hoverAlpha)
+.Button.blue:active
+	color: $color-blue
+	background: rgba($color-blue, $activeAlpha)
+.Button.invert.blue
+	background: $color-blue
+.Button.invert.blue:hover
+	color: $color-white
+	background: adjust-color($color-blue, $lightness: $hoverAlphaInvert)
+.Button.invert.blue:active
+	color: $color-white
+	background: adjust-color($color-blue, $lightness: $activeAlphaInvert)
+// DarkBlue
+.Button.darkBlue:hover
+	color: $color-darkBlue
+	background: rgba($color-darkBlue, $hoverAlpha)
+.Button.darkBlue:active
+	color: $color-darkBlue
+	background: rgba($color-darkBlue, $activeAlpha)
+.Button.invert.darkBlue
+	background: $color-darkBlue
+.Button.invert.darkBlue:hover
+	color: $color-white
+	background: adjust-color($color-darkBlue, $lightness: $hoverAlphaInvert)
+.Button.invert.darkBlue:active
+	color: $color-white
+	background: adjust-color($color-darkBlue, $lightness: $activeAlphaInvert)
+// Light Blue
+.Button.lightBlue:hover
+	color: $color-lightBlue
+	background: rgba($color-darkBlue, $hoverAlpha)
+.Button.lightBlue:active
+	color: $color-lightBlue
+	background: rgba($color-lightBlue, $activeAlpha)
+.Button.invert.lightBlue
+	background: $color-lightBlue
+.Button.invert.lightBlue:hover
+	color: $color-white
+	background: adjust-color($color-lightBlue, $lightness: $hoverAlphaInvert)
+.Button.invert.lightBlue:active
+	color: $color-white
+	background: adjust-color($color-lightBlue, $lightness: $activeAlphaInvert)
+// Gold
+.Button.gold:hover
+	color: $color-gold
+	background: rgba($color-gold, $hoverAlpha)
+.Button.gold:active
+	color: $color-gold
+	background: rgba($color-gold, $activeAlpha)
+.Button.invert.gold
+	background: $color-green
+.Button.invert.gold:hover
+	color: $color-white
+	background: adjust-color($color-gold, $lightness: $hoverAlphaInvert)
+.Button.invert.gold:active
+	color: $color-white
+	background: adjust-color($color-gold, $lightness: $activeAlphaInvert)
+// Green
+.Button.green:hover
+	color: $color-green
+	background: rgba($color-green, $hoverAlpha)
+.Button.green:active
+	color: $color-green
+	background: rgba($color-green, $activeAlpha)
+.Button.invert.green
+	background: $color-green
+.Button.invert.green:hover
+	color: $color-white
+	background: adjust-color($color-green, $lightness: $hoverAlphaInvert)
+.Button.invert.green:active
+	color: $color-white
+	background: adjust-color($color-green, $lightness: $activeAlphaInvert)
+// Orange
+.Button.orange:hover
+	color: $color-orange
+	background: rgba($color-orange, $hoverAlpha)
+.Button.orange:active
+	color: $color-orange
+	background: rgba($color-orange, $activeAlpha)
+.Button.invert.orange
+	background: $color-orange
+.Button.invert.orange:hover
+	color: $color-white
+	background: adjust-color($color-orange, $lightness: $hoverAlphaInvert)
+.Button.invert.orange:active
+	color: $color-white
+	background: adjust-color($color-orange, $lightness: $activeAlphaInvert)
+// Red
+.Button.red:hover
+	color: $color-red
+	background: rgba($color-red, $hoverAlpha)
+.Button.red:active
+	color: $color-red
+	background: rgba($color-red, $activeAlpha)
+.Button.invert.red
+	background: $color-red
+.Button.invert.red:hover
+	color: $color-white
+	background: adjust-color($color-red, $lightness: $hoverAlphaInvert)
+.Button.invert.red:active
+	color: $color-white
+	background: adjust-color($color-red, $lightness: $activeAlphaInvert)
+// Black
+.Button.black:hover
+	color: $color-black
+	background: rgba($color-black, $hoverAlpha)
+.Button.red:active
+	color: $color-black
+	background: rgba($color-black, $activeAlpha)
+.Button.invert.black
+	background: $color-black
+.Button.invert.black:hover
+	color: $color-white
+	background: adjust-color($color-black, $lightness: $hoverAlphaInvert)
+.Button.invert.black:active
+	color: $color-white
+	background: adjust-color($color-black, $lightness: $activeAlphaInvert)
+// Yellow
+.Button.yellow:hover
+	color: $color-red
+	background: rgba($color-yellow, $hoverAlpha)
+.Button.yellow:active
+	color: $color-yellow
+	background: rgba($color-yellow, $activeAlpha)
+.Button.invert.yellow
+	background: $color-yellow
+.Button.invert.yellow:hover
+	color: $color-white
+	background: adjust-color($color-yellow, $lightness: $hoverAlphaInvert)
+.Button.invert.yellow:active
+	color: $color-white
+	background: adjust-color($color-yellow, $lightness: $activeAlphaInvert)
+// White
+.Button.white:hover
+	color: $color-white
+	background: rgba($color-black, $hoverAlpha)
+.Button.white:active
+	color: $color-white
+	background: rgba($color-black, $activeAlpha)
+.Button.invert.white
+	background: $color-white
+.Button.invert.white:hover
+	color: $color-darkGray
+	background: adjust-color($color-darkGray, $lightness: $hoverAlphaInvert)
+.Button.invert.white:active
+	color: $color-darkGray
+	background: adjust-color($color-darkGray, $lightness: $activeAlphaInvert)
+
+
+.statusLabel
+	font-weight: bold
+	margin-right: 0.3em
+
+// Page Components
+
+#LoginBar
+	+barColor($color-darkBlue, $color-lightGray)
+	text-align: right
+	padding: 0
+
+	div *
+		display: inline-block
+
+	.LoginStatus
+		height: 2em
+		vertical-align: middle
+
+#MessageContainer
+	margin: $none
+	padding: $none
+
+	#MessageHeaderBar
+		text-align: center
+		padding-top: 1em
+
+		.material-icons
+			margin-left: 0.1em
+
+	#MessageIsBeingEdited
+		text-align: center
+
+		h4
+			color: $color-darkGray
+			margin: 0.5em 0
+
+	#MessageSelectionBar
+		text-align: center
+
+		div>*
+			display: inline-block
+			vertical-align: middle
+
+		#AreaSelect, #YrWkSelect
+			display: inline-block
+			margin: 0.5em
+
+			label
+				margin-right: 0.25em
+				display: none
+
+			select
+				max-width: $selectMaxWidth
+				width: auto
+				display: inline-block
+				background-image: initial
+
+	#MessageBrandingBar
+		+barColor($color-white)
+		border-bottom: 1px solid $color-gray
+		padding: $MessageBrandingBarPadding 0
+		height: $AreaIconSize + $MessageBrandingBarPadding + $MessageBrandingBarPadding
+
+		div>*
+			display: inline-block
+
+		#CurrentAreaTitle
+			margin: 0
+			margin-top: $MessageBrandingBarPadding * 2
+			margin-bottom: $MessageBrandingBarPadding * 2
+
+			*
+				display: block
+				margin: 0
+
+			h4
+				color: $color-black
+
+
+
+		.CurrentAreaIcon
+			position: relative
+			float: right
+			height: $AreaIconSize
+			width: $AreaIconSize
+			background-color: $color-lightGray
+			+makeCircle()
+
+			.IconGraphic
+				position: absolute
+				left: $AreaIconPadding
+				right: $AreaIconPadding
+				top: $AreaIconPadding
+				bottom: $AreaIconPadding
+				+background-position(contain, right)
+
+	#MessageStatusBar, #MessageEditBar
+		text-align: center
+
+		.StatusIndicator
+			display: inline-block
+			vertical-align: middle
+			height: 2em
+			color: $color-darkGray
+
+			.status::before
+				content: "Status:"
+				font-weight: bold
+				margin-right: 0.3em
+
+			.lockoutMessage
+				font-style: italic
+				font-size: 0.85em
+				margin-left: 0.5em
+
+	#MessageEditBar
+		+barColor(none)
+
+	#HomeScreen
+		margin-top: 3em
+
+	#NotPublishedMessage
+		margin-top: 3em
+		text-align: center
+
+		h4
+			color: $color-darkGray
+
+	#MessageCanvas
+		max-width: $desktopMaxWidth
+		+center-block(2em)
+
+		p
+			margin: 1em 0
+
+		ul
+			list-style-type: none
+			margin: 1em 0
+			padding-left: 2.5em
+
+			li
+				list-style-type: inherit
+				margin: 0.5em 0
+				position: relative
+
+				ul
+					margin: 0
+
+					li
+						margin: 0.25em 0
+
+						ul
+							margin: 0
+
+							li
+								margin: 0.1em 0
+
+							li:before
+								content: "-"
+
+					li:before
+						content: "\25AA"
+
+			li:before
+				content: "\25CF"
+				position: absolute
+				left: -1.5em
+				color: $color-darkGray
+
+#DMMArea
+	margin-bottom: 2em
+
+#DMMPhoto img
+	margin: auto
+	display: block
+	max-width: 200px
+	+makeCircle()
+
+#DMMTitle
+	h1, h2, h3, h4, h5, h6
+		text-align: center
+		margin-top: $defaultPad
+		margin-bottom: 0
+
+	p
+		margin: 0 !important
+
+#DMMTitle #TITLEBOX1
+	text-align: center
+	font-size: 0.9em
+	margin: $defaultPad 0
+
+#SpotlightArea i
+	margin-right: $defaultPad
