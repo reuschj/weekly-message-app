@@ -6,7 +6,7 @@
   "dependencies": {
     "@ckeditor/ckeditor5-build-inline": "^1.0.0-alpha.2",
     "babel-preset-env": "^1.6.1",
-    "bootstrap": "^4.0.0",
+    "bootstrap": "~> 4.1.2",
     "dompurify": "^1.0.3",
     "hoek": "^5.0.3",
     "jquery": "^3.3.1",
