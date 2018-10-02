@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
 // import PropTypes from 'prop-types'
 // Import components
-import Bar from '../../generic/Bar'
-import SaveButton from '../buttons/SaveButton'
-import SubmitButton from '../buttons/SubmitButton'
-import UnSubmitButton from '../buttons/UnSubmitButton'
-import PublishButton from '../buttons/PublishButton'
-import UnpublishButton from '../buttons/UnpublishButton'
+import Bar from '../../generic/Bar';
+import SaveButton from '../buttons/SaveButton';
+import SubmitButton from '../buttons/SubmitButton';
+import UnSubmitButton from '../buttons/UnSubmitButton';
+import PublishButton from '../buttons/PublishButton';
+import UnpublishButton from '../buttons/UnpublishButton';
 
 const MessageEditBar = (props) => {
     if (!props.show) {
-        return null
+        return null;
     }
     return (
         <Bar id="MessageEditBar">
@@ -30,7 +30,7 @@ const MessageEditBar = (props) => {
                 show={props.allowUnPublish}
             />
         </Bar>
-    )
-}
+    );
+};
 
-export default MessageEditBar
+export default MessageEditBar;

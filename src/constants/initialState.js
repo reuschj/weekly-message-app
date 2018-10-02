@@ -1,10 +1,10 @@
-import config from '../config'
-import { getCurrentWeek, getUserType } from '../utility'
+import config from '../config';
+import { getCurrentWeek, getUserType } from '../utility';
 
 const currentWeek = getCurrentWeek(
     config.weekInfo.weeks,
     config.weekInfo.current
-)
+);
 
 const initialState = {
     user: {
@@ -27,6 +27,6 @@ const initialState = {
             value: 'undefinded'
         }
     }
-}
+};
 
-export default initialState
+export default initialState;

@@ -1,36 +1,34 @@
-import React from 'react'
+import React from 'react';
 // import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 // Import components
-import Bar from '../../generic/Bar'
+import Bar from '../../generic/Bar';
 // Import constants
-import config from '../../../config'
+import config from '../../../config';
 // Import utilities
-import { lookupAreaInfo } from '../../../utility'
+import { lookupAreaInfo } from '../../../utility';
 
 const MessageBrandingBar = (props) => {
 	if (!props.show) {
-		return null
+		return null;
 	}
 	return (
-		<Bar id="MessageBrandingBar">
-			<div id="CurrentAreaTitle">
+		<Bar id='MessageBrandingBar'>
+			<div id='CurrentAreaTitle'>
 				<h3>{props.area}</h3>
 				<h4>{props.areaTitle}</h4>
 			</div>
-			<div className="CurrentAreaIcon">
-    			<div className="IconGraphic" style={{background: "url(" + props.areaIcon + ")"}}></div>
+			<div className='CurrentAreaIcon'>
+				<div className="IconGraphic" style={{ background: 'url(' + props.areaIcon + ')' }} />
             </div>
 		</Bar>
-	)
-}
+	);
+};
 
-const mapStateToProps = (state) => {
-    return {
-        area: state.message.area,
-		areaTitle: lookupAreaInfo(state.message.area, "title", config.areaInfo),
-		areaIcon: lookupAreaInfo(state.message.area, "icon", config.areaInfo)
-	}
-}
+const mapStateToProps = (state) => ({
+    area: state.message.area,
+	areaTitle: lookupAreaInfo(state.message.area, 'title', config.areaInfo),
+	areaIcon: lookupAreaInfo(state.message.area, 'icon', config.areaInfo)
+});
 
-export default connect(mapStateToProps)(MessageBrandingBar)
+export default connect(mapStateToProps)(MessageBrandingBar);

@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 // import PropTypes from 'prop-types'
 // Import components
-import Container from './Container'
+import Container from './Container';
 
 const Bar = (props) => {
-	var addClass = ""
+	let addClass = ""
 	if (props.addClass !== undefined) {
 		addClass = " " + props.addClass
 	}
@@ -17,4 +17,4 @@ const Bar = (props) => {
 	)
 }
 
-export default Bar
+export default Bar;

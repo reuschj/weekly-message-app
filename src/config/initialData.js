@@ -396,4 +396,4 @@ export const initialData = [
             }
         ]
     }
-]
+];

@@ -1,28 +1,28 @@
-import InlineEditor from '@ckeditor/ckeditor5-build-inline'
+import InlineEditor from '@ckeditor/ckeditor5-build-inline';
 // Import config
-import config from '../config'
+import config from '../config';
 // Import utilities
-import { setContentFromData } from './content'
-import { writeDataToSource } from './dataIO'
+import { setContentFromData } from './content';
+import { writeDataToSource } from './dataIO';
 
 // Loads all CKE editor instances specified in config
-export const loadCKEditors = () => {
+export const loadCKEditors = async () => {
     for (let instance in config.editorInstances) {
         let thisInstance = config.editorInstances[instance]
         if (thisInstance.enabled) {
             if (!thisInstance.loaded) {
                 thisInstance.promise = InlineEditor
                     .create(
-                        document.querySelector("#" + thisInstance.selector)
+                        document.querySelector('#' + thisInstance.selector);
                     )
-                    .catch( error => {
-                    console.error( error )
-                } )
-                thisInstance.loaded = true
+                    .catch((error) => {
+                        console.error(error);
+                    } );
+                thisInstance.loaded = true;
             }
         }
     }
-}
+};
 // Saves all CKE editor instances specified in config. Async Promise
 // Saves to the dataSource
 export const saveEditorContent = (editable, data, area, yrwk) => {
@@ -65,7 +65,7 @@ export const saveEditorContent = (editable, data, area, yrwk) => {
     })
 }
 // Unloads all CKE editor instances specified in config. Async Promise
-export const destroyEditors = (editable) => {
+export const destroyEditors = async (editable) => {
     return new Promise (function(resolve, reject) {
         if (editable) {
             var promises = []
@@ -81,7 +81,7 @@ export const destroyEditors = (editable) => {
             resolve(
                 Promise.all(promises).then(function(editor) {
                     for (let i in editor) {
-                        editor[i].destroy()
+                        await editor[i].destroy()
                     }
                     return true
                 }).then(function(results) {

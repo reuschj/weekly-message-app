@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 // import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 // Import components
-import Bar from '../../generic/Bar'
-import HomeButton from '../buttons/HomeButton'
-import AreaSelect from '../selects/AreaSelect'
-import YrWkSelect from '../selects/YrWkSelect'
-import PrintButton from '../buttons/PrintButton'
+import Bar from '../../generic/Bar';
+import HomeButton from '../buttons/HomeButton';
+import AreaSelect from '../selects/AreaSelect';
+import YrWkSelect from '../selects/YrWkSelect';
+import PrintButton from '../buttons/PrintButton';
 
 const MessageSelectionBar = (props) => {
     if (!props.show) {
@@ -14,7 +14,7 @@ const MessageSelectionBar = (props) => {
             <Bar id="MessageIsBeingEdited" addClass="editable">
                 <h4>You are editing {props.area}.</h4>
             </Bar>
-        )
+        );
     }
     return (
         <Bar id="MessageSelectionBar">
@@ -27,14 +27,12 @@ const MessageSelectionBar = (props) => {
             <YrWkSelect />
             <PrintButton />
         </Bar>
-    )
-}
+    );
+};
 
-const mapStateToProps = (state) => {
-    return {
-        area: state.message.area,
-		editable: state.app.editable
-	}
-}
+const mapStateToProps = (state) => ({
+    area: state.message.area,
+	editable: state.app.editable
+});
 
-export default connect(mapStateToProps)(MessageSelectionBar)
+export default connect(mapStateToProps)(MessageSelectionBar);
